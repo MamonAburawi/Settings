@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainwindow">
+
+    <fragment
+        android:id="@+id/mainwindow"
+        android:name="com.example.settings.screens.MainWindow"
+        android:label="MainWindow"
+        tools:layout="@layout/main_window_fragment">
+
+        <action
+            android:id="@+id/action_main_window_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.settings.screens.Settings"
+        android:label="SettingsFragment"/>
+
+
+</navigation>

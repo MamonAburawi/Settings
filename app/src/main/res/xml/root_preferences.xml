@@ -1,0 +1,52 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="screens.Settings">
+
+    <PreferenceCategory app:title="General"
+        app:icon="@drawable/ic_settings">
+
+        <EditTextPreference
+            app:key="name"
+            app:title="Your name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="gmail"
+            app:title="Your Gmail"
+            app:useSimpleSummaryProvider="true" />
+
+
+        <ListPreference
+            app:defaultValue="color"
+            app:entries="@array/colors_entries"
+            app:entryValues="@array/colors_values"
+            app:key="color"
+            app:title="Select Color"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notification"
+        android:icon="@drawable/ic_notification">
+
+        <SwitchPreference
+            app:key="notifyState"
+            app:defaultValue="true"
+            app:title="Notification State" />
+
+        <CheckBoxPreference
+            app:key="notifySound"
+            app:title="Notification Sound"
+            app:defaultValue="false"
+            app:summaryOn="if you don't want sound in notification please turn off"
+            app:summaryOff="if you want sound in notification please turn on"/>
+
+
+
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

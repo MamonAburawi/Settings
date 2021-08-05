@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.MainWindow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Ahmed"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/user_Gmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="ahmed@gmail.com"
+                android:textSize="25sp" />
+            <TextView
+                android:id="@+id/user_Color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Red"
+                tools:textColor="@color/red"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/notify_State"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                tools:text="Notification is On" />
+
+            <TextView
+                android:id="@+id/notify_Sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Notification Sound is Off"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_settings" />
+    </FrameLayout>
+</layout>
