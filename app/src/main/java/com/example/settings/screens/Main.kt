@@ -15,7 +15,7 @@ import androidx.preference.PreferenceManager
 import com.example.settings.R
 import com.example.settings.databinding.MainWindowFragmentBinding
 
-class MainWindow : Fragment() {
+class Main : Fragment() {
 
     private lateinit var binding: MainWindowFragmentBinding
 
@@ -45,10 +45,10 @@ class MainWindow : Fragment() {
 
 
     private fun loadSettings(){
-        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val pref = PreferenceManager.getDefaultSharedPreferences(requireContext())
         val name = pref.getString("name","")
         val gmail = pref.getString("gmail","")
-        val color = pref.getString("color","1")!!.toInt() // we set defValue 1 for 1st color in list
+        val color = pref.getString("color","1") // we set defValue 1 for 1st color in list
         val notifyState = pref.getBoolean("notifyState",true)
         val notifySound = pref.getBoolean("notifySound",false)
 
@@ -58,15 +58,15 @@ class MainWindow : Fragment() {
             binding.userGmail.text = gmail
 
             when(color){
-                1->{
+                "1"->{
                     binding.userColor.text = "Red"
                     binding.userColor.setTextColor(Color.RED)
                 }
-                2->{
+                "2"->{
                     binding.userColor.text = "Blue"
                     binding.userColor.setTextColor(Color.BLUE)
                 }
-                3->{
+                "3"->{
                     binding.userColor.text = "Green"
                     binding.userColor.setTextColor(Color.GREEN)
                 }

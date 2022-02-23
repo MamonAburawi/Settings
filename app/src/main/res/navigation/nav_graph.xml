@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainwindow"
-        android:name="com.example.settings.screens.MainWindow"
+        android:name="com.example.settings.screens.Main"
         android:label="MainWindow"
         tools:layout="@layout/main_window_fragment">
 

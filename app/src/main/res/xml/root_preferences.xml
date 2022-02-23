@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context="screens.Settings">
 
-    <PreferenceCategory app:title="General"
+    <PreferenceCategory
+        app:title="General"
         app:icon="@drawable/ic_settings">
 
         <EditTextPreference
@@ -15,7 +16,6 @@
             app:key="gmail"
             app:title="Your Gmail"
             app:useSimpleSummaryProvider="true" />
-
 
         <ListPreference
             app:defaultValue="color"
@@ -42,11 +42,11 @@
             app:summaryOn="if you don't want sound in notification please turn off"
             app:summaryOff="if you want sound in notification please turn on"/>
 
-
-
-
-
     </PreferenceCategory>
+
+
+
+
 
 
 </PreferenceScreen>
