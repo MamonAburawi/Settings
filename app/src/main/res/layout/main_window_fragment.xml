@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="settingViewModel"
+            type="com.example.settings.screens.MainViewModel" />
+
     </data>
 
     <FrameLayout
@@ -24,19 +28,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Ahmed"
+                setName="@{settingViewModel.settings.user.name}"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/user_Gmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                setName="@{settingViewModel.settings.user.email}"
                 tools:text="ahmed@gmail.com"
                 android:textSize="25sp" />
+
             <TextView
                 android:id="@+id/user_Color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Red"
+                setColor="@{settingViewModel.settings.color}"
                 tools:textColor="@color/red"
                 android:textSize="25sp" />
 
@@ -45,12 +53,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
+                notifyState="@{settingViewModel.settings.notifyState}"
                 tools:text="Notification is On" />
 
             <TextView
                 android:id="@+id/notify_Sound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                notifySound="@{settingViewModel.settings.notifySound}"
                 tools:text="Notification Sound is Off"
                 android:textSize="25sp" />
 
